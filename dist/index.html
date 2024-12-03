@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../src/output.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/background_1.jpeg" type="image/jpeg">
+
+
+</head>
+
+<body class="bg-cover bg-no-repeat"
+    style="background-image: url('../images/background_1.jpeg'); font-family: 'Josefin Sans', sans-serif;">
+    <nav class="flex items-center justify-between  p-1 rounded-lg">
+        <!-- Left: Logo -->
+        <h1 class="text-white text-xl font-bold bg-custom-gray bg-opacity-60 p-3 m-2 rounded-2xl">The King</h1>
+
+        <!-- Right: Navigation Links -->
+        <div class="flex space-x-8 text-white cursor-pointer m-2 items-center">
+            <p class="hover:underline text-sm">Home</p>
+            <p class="hover:underline text-sm">About Me</p>
+            <p class="hover:underline text-sm">Social Links</p>
+            <p class="hover:underline text-sm">My Services</p>
+            <p class="hover:underline text-xs bg-custom-gray p-2 rounded-lg bg-opacity-60">Login & Sign Up</p>
+        </div>
+    </nav>
+
+    <div class="body grid place-content-center">
+        <div class="title&pic flex justify-center items-center animate-fadeIn animation-delay-300">
+            <div
+                class="title text-white text-2xl bg-custom-gray bg-opacity-60 p-3 rounded-lg text-center items-center w-2/4">
+                <H2 class=" text-center items-center">Sagar Ceo & Founder</H2>
+            </div>
+            <!-- <div class="profile_pic bg-red-600 h-36 w-36 rounded-full"></div> -->
+            <div class="pic m-4 animate-fadeIn animation-delay-300"><img class='h-56 w-56 rounded-full'
+                    src="../images/my_pic.jpg" alt="my_pic">
+            </div>
+
+        </div>
+        <div class="paragraphs animate-fadeIn animation-delay-300">
+            <p class="text-white opacity-80 text-2xl">Hey buddy , Welcome to my app if you cant <br>
+                register till now, then what are you waiting<br>
+                for, I hope you like services provided by me.
+                I have a special gifts for first 10M users....<br>
+                so grab it fast 🫢🤫.......<br>
+
+
+                Thanks for Registering and Coming 😉</p>
+        </div>
+        <div class="button animate-fadeIn animation-delay-300"> <Button
+                class="bg-custom-gray bg-opacity-60 text-xl p-3 text-white opacity-70 rounded-2xl mt-4 mb-4">Register
+                Here</Button></div>
+        <div class="paragraphs  opacity-0 animate-fadeIn-on-scroll">
+            <p class="text-white opacity-80 text-2xl">Our services are comming soon.....
+                So reserve your spot by registering <br>
+                yourself....<br>
+
+
+                Or Already Registerd then Login Here</p>
+        </div>
+        <div class="button animate-fadeIn animation-delay-300"> <Button
+                class="bg-custom-gray bg-opacity-60 text-xl p-3 text-white opacity-70 rounded-2xl mt-4 mb-4">Login
+                Here</Button></div>
+    </div>
+    <script>
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeIn');
+                        entry.target.classList.remove('opacity-0');
+                    }
+                });
+            },
+            { threshold: 0.1 } // Trigger when 10% of the element is visible
+        );
+
+        document.querySelectorAll('.animate-fadeIn-on-scroll').forEach((el) => observer.observe(el));
+    </script>
+
+
+
+</body>
+
+</html>
